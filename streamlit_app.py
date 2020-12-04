@@ -89,7 +89,7 @@ def run_the_app(algorithm, params=None):
         for subhead in prereqs:
             st.subheader(subhead)
             st.write(prereqs[subhead])
-        st.success(text="Prerequisites generated successfully")
+        st.success("Prerequisites generated successfully")
 
 
 @st.cache(show_spinner=False)
