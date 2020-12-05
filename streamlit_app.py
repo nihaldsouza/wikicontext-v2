@@ -19,9 +19,9 @@ def main():
     nltk.download('punkt')
     # Algorithm Selection
     algorithm = True
-    algorithm = st.sidebar.selectbox("Algorithm that you want to use.", ["TextRank", "T5"], index=0)
+    algorithm = st.sidebar.selectbox("Algorithm that you want to use.", ["TextRank", "T5 (Beta)"], index=0)
 
-    if algorithm == "T5":
+    if algorithm == "T5 (Beta)":
         t5_model = st.sidebar.selectbox("Select a T5 Model.", ["T5 Small"], index=0)
         run_t5_algorithm(t5_model)
     if algorithm == "TextRank":
