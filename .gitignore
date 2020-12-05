@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+models/t5-small/config.json
+models/t5-small/modelcard.json
+models/t5-small/pytorch_model.bin
+models/t5-small/rust_model.ot
+models/t5-small/spiece.model
+models/t5-small/tf_model.h5
+models/t5-small/tokenizer.json
