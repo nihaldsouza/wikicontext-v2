@@ -15,5 +15,3 @@ We are doing some active development on this now, because there is a provision t
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/streamlit)
 
-[Stable] 
-
