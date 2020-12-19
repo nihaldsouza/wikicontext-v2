@@ -24,6 +24,7 @@ def main():
     algorithm = st.sidebar.selectbox("Algorithm that you want to use.", ["TextRank", "T5 (Beta)"], index=0)
 
     if algorithm == "T5 (Beta)":
+        algorithm = "T5"
         t5_model = st.sidebar.selectbox("Select a T5 Model.", ["T5 Small"], index=0)
         params = setup_t5_algorithm(t5_model)
         run_the_app(algorithm, params)
