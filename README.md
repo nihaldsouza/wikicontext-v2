@@ -13,5 +13,4 @@ WikiContext has two types of searches - linear and recommended. Recommended is, 
 ### Contributing
 We are doing some active development on this now, because there is a provision to host the app using streamlit! 
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/main)
-[![Heroku App](http://heroku-badge.herokuapp.com/?app=angularjs-crypto&style=flat&svg=1)](https://wikicontext-v2.herokuapp.com/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/streamlit)

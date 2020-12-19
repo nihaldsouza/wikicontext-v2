@@ -7,10 +7,6 @@
             "url": "https://huggingface.co/t5-small/resolve/main/config.json",
             "size": 1197
         },
-        "models/t5-small/modelcard.json": {
-            "url": "https://huggingface.co/t5-small/resolve/main/modelcard.json",
-            "size": 230
-        },
         "models/t5-small/pytorch_model.bin": {
             "url": "https://huggingface.co/t5-small/resolve/main/pytorch_model.bin",
             "size": 242065649

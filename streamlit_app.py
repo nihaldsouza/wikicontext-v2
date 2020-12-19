@@ -5,11 +5,12 @@ import os
 import urllib
 import wikipedia
 import nltk
+from urllib.error import HTTPError
 
 
 def main():
     st.sidebar.title('WikiContext')
-
+    print("Starting...")
     # Download external dependencies
     download_title = st.text('Downloading dependencies...')
     for filename in external_dependencies.keys():
@@ -44,6 +45,7 @@ def download_file(file_path):
         weights_warning = st.warning("Downloading %s..." % file_path)
         progress_bar = st.progress(0)
         with open(file_path, "wb") as output_file:
+            print(external_dependencies[file_path]["url"])
             with urllib.request.urlopen(external_dependencies[file_path]["url"]) as response:
                 length = int(response.info()["Content-Length"])
                 counter = 0.0
@@ -60,6 +62,8 @@ def download_file(file_path):
                                             (file_path, counter / MEGABYTES, length / MEGABYTES))
                     progress_bar.progress(min(counter / length, 1.0))
 
+    except urllib.error.HTTPError as err:
+        print(err)
     # Finally, we remove these visual elements by calling .empty().
     finally:
         if weights_warning is not None:
