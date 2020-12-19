@@ -1,7 +1,8 @@
 import streamlit as st
 from src.wikicontext import WikiContext
 import json
-import os, urllib
+import os
+import urllib
 import wikipedia
 import nltk
 
@@ -23,7 +24,8 @@ def main():
 
     if algorithm == "T5 (Beta)":
         t5_model = st.sidebar.selectbox("Select a T5 Model.", ["T5 Small"], index=0)
-        run_t5_algorithm(t5_model)
+        params = setup_t5_algorithm(t5_model)
+        run_the_app(algorithm, params)
     if algorithm == "TextRank":
         run_the_app(algorithm)
 
@@ -66,17 +68,19 @@ def download_file(file_path):
             progress_bar.empty()
 
 
-def run_t5_algorithm(t5_model):
+def setup_t5_algorithm(t5_model):
     params = {}  # This will hold the hyper parameters for the summarizers
     if t5_model == "T5 Small":
         params['model'] = "models/t5-small/"
         params['tokenizer'] = "models/t5-small/"
-    run_the_app("T5", params)
+    return params
 
 
 def run_the_app(algorithm, params=None):
     if params is None:
         params = {}
+
+    max_prereq = st.sidebar.slider('Select the number of prerequisites.', 1, 10, 5)
 
     query = st.text_input(label="The topic you want summarized.", value="")
     results = []
@@ -85,7 +89,7 @@ def run_the_app(algorithm, params=None):
         subject = st.selectbox(label="Choose the Wikipedia page.", options=results, index=0)
 
         if subject and algorithm:
-            wc = WikiContext(subject, algorithm, params)
+            wc = WikiContext(subject, algorithm, params, max_prereq)
             st.title(subject)
 
             with st.spinner(text="Generating summary..."):

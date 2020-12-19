@@ -20,8 +20,7 @@ class WikiContext(Subject):
         hyperlinks = self._get_links()
         match = []
         for phrase in keyphrases:
-            match.extend([hyperlink for hyperlink in hyperlinks if 
-                hyperlink.lower() in phrase.lower()])
+            match.extend([hyperlink for hyperlink in hyperlinks if hyperlink.lower() in phrase.lower()])
             # Make it unique
             match = list(set(match))
             if len(match) >= self.max_prereq:
