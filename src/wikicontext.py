@@ -1,5 +1,6 @@
 from src.subject import Subject
 from src.algorithms.textrank import TextRank
+from src.algorithms.bert import Bert
 
 
 class WikiContext(Subject):
@@ -38,15 +39,17 @@ class WikiContext(Subject):
     def mapper(self):
         if self.algorithm == 'TextRank':
             return TextRank
+        if self.algorithm == 'Bert':
+            return Bert
 
     def get_main_summary(self):
         model_class = self.mapper()
         model = model_class(text=self.content, **self.params)
-        summary = model.get_summary(self.algorithm)
+        summary = model.get_summary()
         if summary:
             return summary
-        else:
-            return self.content
+        # else:
+        #     return self.content
 
     def get_prereqs_summary(self):
         model_class = self.mapper()
@@ -57,7 +60,7 @@ class WikiContext(Subject):
                 if count >= self.max_prereq:
                     break
                 model = model_class(self.prereq[each], **self.params)
-                prereq_summary[each] = model.get_summary(self.algorithm)
+                prereq_summary[each] = model.get_summary()
                 count += 1
             except ValueError:
                 continue
