@@ -11,7 +11,7 @@ WikiContext makes use of extractive text summarization, using [TextRank](https:/
 
 ### What's next?
 
-1. [BERT extractive text summarizer](https://pypi.org/project/bert-extractive-summarizer/) as an additional algorithm.
+1. [BERT extractive text summarizer](https://pypi.org/project/bert-extractive-summarizer/) as an additional algorithm. We are exploring the option of using [Serverless Framework](https://www.serverless.com/) to deploy this service.
 
 
 ### Contributing
