@@ -15,7 +15,7 @@ Add the [BERT extractive text summarizer](https://pypi.org/project/bert-extracti
 
 
 ### Contributing
-We are doing some active development on this now, because there is a provision to host the app using streamlit! 
+We are doing some active development on this now, so feel free to raise a PR! You can contact me directly on Twitter for any further enquires.
 
 Link 1:
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/main)
