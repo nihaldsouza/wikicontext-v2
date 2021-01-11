@@ -1,6 +1,7 @@
 import streamlit as st
 from src.wikicontext import WikiContext
 import wikipedia
+from src.graph import Graph
 
 
 def main():
@@ -32,8 +33,12 @@ def run_the_app(algorithm, params=None, max_prereqs=5):
                 st.markdown(get_main_summary(wc))
             with st.spinner(text="Generating prerequisites..."):
                 prereqs = get_prereq_summary(wc)
+            with st.spinner(text="Generating graph..."):
+                gr = Graph(subject=subject, prereq_list=list(prereqs.keys()))
+                get_prereq_graph(gr)
             st.header("Prerequisites")
             for subhead in prereqs:
+                st.markdown(f"<div id='linkto_{subhead}'></div>", unsafe_allow_html=True)
                 st.subheader(subhead)
                 st.write(prereqs[subhead])
 
@@ -50,6 +55,9 @@ def get_prereq_summary(wikicontext):
     if not wikicontext.prereq:
         wikicontext.get_prereqs_content()
     return wikicontext.get_prereqs_summary()
+
+def get_prereq_graph(graph):
+    return graph.generate_graph()
 
 
 if __name__ == "__main__":
