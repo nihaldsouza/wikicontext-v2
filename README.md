@@ -11,7 +11,7 @@ WikiContext makes use of extractive text summarization, using [TextRank](https:/
 
 ### What's next?
 
-1. [Wikipedia2Vec](https://wikipedia2vec.github.io/wikipedia2vec/) to obtain the embeddings of a wikipedia subject and use them as prerequisities sub-topics.
+1. [Wikipedia2Vec](https://wikipedia2vec.github.io/wikipedia2vec/) to obtain the embeddings of a wikipedia subject and use them as prerequisite sub-topics.
 
 2. [BERT extractive text summarizer](https://pypi.org/project/bert-extractive-summarizer/) as an additional algorithm for summurization. We are exploring the option of using [Serverless Framework](https://www.serverless.com/) to deploy this service.
 
