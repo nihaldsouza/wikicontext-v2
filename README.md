@@ -17,7 +17,7 @@ WikiContext makes use of extractive text summarization, using [TextRank](https:/
 
 
 ### Contributing
-We are doing some active development on this now, so feel free to raise a PR! You can contact me directly on Twitter for any further enquires.
+We are doing some active development on this now. Feel free to raise a pull request. 
 
 Link 1:
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/main)
