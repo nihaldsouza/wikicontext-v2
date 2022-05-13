@@ -20,7 +20,7 @@ WikiContext makes use of extractive text summarization, using [TextRank](https:/
 We are doing some active development on this now. Feel free to raise a pull request. 
 
 Link 1:
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/nihaldsouza1/wikicontext) (Hugging Face Speaces)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/nihaldsouza1/wikicontext) (Hugging Face Spaces)
 
 Link 2:
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/main) (Streamlit Cloud)
