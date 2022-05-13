@@ -1,4 +1,4 @@
-## WikiContext [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/main)
+## WikiContext [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/nihaldsouza1/wikicontext)
 
 Wikipedia articles are hardly lucid. There is always some sort of jargon which floats around, that is difficult to understand in layman's term. This project is an attempt to simplify the understanding of any Wikipedia article by providing a summary of some of the key concepts.
 We provide the context, hence the name WikiContext.
@@ -20,8 +20,8 @@ WikiContext makes use of extractive text summarization, using [TextRank](https:/
 We are doing some active development on this now. Feel free to raise a pull request. 
 
 Link 1:
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/main)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/nihaldsouza1/wikicontext)
 
 Link 2:
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/avinashbhat/wikicontext-v2/main)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/nihaldsouza/wikicontext-v2/main)
 
